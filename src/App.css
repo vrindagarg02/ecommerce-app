@@ -1,0 +1,270 @@
+
+/* =========================
+   GLOBAL RESET + THEME
+========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #ca56c4;
+  color: #222;
+}
+
+/* =========================
+   NAVBAR (MODERN GLASS + FIXED TOP)
+========================= */
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 25px;
+  background: linear-gradient(90deg, #ff4d6d, #ff85a2);
+  color: white;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 12px;
+  font-weight: 600;
+}
+
+nav a:hover {
+  opacity: 0.8;
+}
+
+/* =========================
+   PAGE TITLE
+========================= */
+
+h1 {
+  text-align: center;
+  font-size: 32px;
+  margin: 20px 0;
+  color: black;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* =========================
+   CATEGORY BUTTONS
+========================= */
+
+button {
+  border: none;
+  padding: 10px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+/* =========================
+   HOME GRID
+========================= */
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+/* =========================
+   PRODUCT CARD (PREMIUM LOOK)
+========================= */
+
+.product-card {
+  background: #fff;
+  border-radius: 15px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  transition: 0.3s ease;
+  border: 1px solid rgba(255, 77, 109, 0.1);
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(255, 77, 109, 0.2);
+}
+
+.product-card img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* =========================
+   BUTTON COLORS
+========================= */
+
+button {
+  background: #ff4d6d;
+  color: white;
+}
+
+button:hover {
+  background: #ff2e63;
+}
+
+/* Add to cart special */
+.product-card button:nth-child(2) {
+  background: #111;
+}
+
+.product-card button:nth-child(2):hover {
+  background: #333;
+}
+
+/* =========================
+   CART PAGE
+========================= */
+
+#cart-page {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  padding: 15px;
+  margin: 12px 0;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+/* =========================
+   CHECKOUT PAGE
+========================= */
+
+#checkout-page {
+  max-width: 750px;
+  margin: auto;
+  padding: 25px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* =========================
+   LOGIN PAGE (ULTRA CLEAN)
+========================= */
+
+#login-page {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ca56c4;
+ 
+}
+
+.login-card {
+  width: 100%;
+  max-width: 400px;
+  background: whitesmoke;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.login-card h1 {
+  color: black;
+  font-size: 34px;
+  margin-bottom: 10px;
+}
+
+.login-card p {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.login-card input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  outline: none;
+}
+
+.login-card input:focus {
+  border: 2px solid #ff4d6d;
+}
+
+#login-button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 15px;
+  background: linear-gradient(90deg, #ff4d6d, #ff85a2);
+  color: white;
+  border-radius: 10px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+
+#login-button:hover {
+  transform: scale(1.03);
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .product-card img {
+    height: 180px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  .cart-item {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+}
+nav a[href="/cart"] {
+  background: #ff2e63;
+  padding: 8px 12px;
+  border-radius: 10px;
+  color: white;
+  box-shadow: 0 4px 10px rgba(255, 46, 99, 0.3);
+}
+nav button {
+  margin-left: 10px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: none;
+  background:#ff2e63;
+  color: white;
+  cursor: pointer;
+}
+
+nav button:hover {
+  background: #333;
+}
